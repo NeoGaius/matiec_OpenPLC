@@ -55,6 +55,25 @@ FUNCTION_BLOCK SL_INIT
 END_FUNCTION_BLOCK
 
 (*
+ * THM Configure
+ * -------------
+ *)
+FUNCTION_BLOCK SLM_04THM_CONFIG
+  VAR_INPUT
+    SLOT : SINT;
+    UNITS : SINT;
+    CH1_RANGE : SINT;
+    CH2_RANGE : SINT;
+    CH3_RANGE : SINT;
+    CH4_RANGE : SINT;
+  END_VAR
+  VAR_OUTPUT
+    SUCCESS : BOOL;
+  END_VAR
+  SUCCESS := 0;
+END_FUNCTION_BLOCK
+
+(*
  * SL_DISCRETE_OUT_8
  * -------------
  *)
@@ -206,6 +225,30 @@ FUNCTION_BLOCK SL_ANALOG_IN_4
 END_FUNCTION_BLOCK
 
 (*
+ * SLM_ANALOG_IN_8
+ * -------------
+ *)
+FUNCTION_BLOCK SLM_ANALOG_IN_8
+  VAR_INPUT
+    SLOT : SINT;
+  END_VAR
+  VAR_OUTPUT
+    I1 : UINT;
+    I2 : UINT;
+    I3 : UINT;
+    I4 : UINT;
+    I5 : UINT;
+    I6 : UINT;
+    I7 : UINT;
+    I8 : UINT;
+  END_VAR
+  VAR
+    DUMMY : SINT;
+  END_VAR
+  DUMMY := 0;
+END_FUNCTION_BLOCK
+
+(*
  * SL_ANALOG_OUT_4
  * -------------
  *)
@@ -216,6 +259,48 @@ FUNCTION_BLOCK SL_ANALOG_OUT_4
     O2 : UINT;
     O3 : UINT;
     O4 : UINT;
+  END_VAR
+  VAR
+    DUMMY : SINT;
+  END_VAR
+  DUMMY := 0;
+END_FUNCTION_BLOCK
+
+(*
+ * SLM_ANALOG_OUT_8
+ * -------------
+ *)
+FUNCTION_BLOCK SLM_ANALOG_OUT_8
+  VAR_INPUT
+    SLOT : SINT;
+    O1 : UINT;
+    O2 : UINT;
+    O3 : UINT;
+    O4 : UINT;
+    O5 : UINT;
+    O6 : UINT;
+    O7 : UINT;
+    O8 : UINT;
+  END_VAR
+  VAR
+    DUMMY : SINT;
+  END_VAR
+  DUMMY := 0;
+END_FUNCTION_BLOCK
+
+(*
+ * SLM_TEMPERATURE_4
+ * -------------
+ *)
+FUNCTION_BLOCK SLM_TEMPERATURE_4
+  VAR_INPUT
+    SLOT : SINT;
+  END_VAR
+  VAR_OUTPUT
+    I1 : REAL;
+    I2 : REAL;
+    I3 : REAL;
+    I4 : REAL;
   END_VAR
   VAR
     DUMMY : SINT;

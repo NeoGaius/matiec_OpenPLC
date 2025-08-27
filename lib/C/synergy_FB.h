@@ -1,7 +1,7 @@
 /************************************************************************
- *                  DECLARATION OF P1AM LIB BLOCKS                      *
+ *                  DECLARATION OF Synergy LIB BLOCKS                   *
 ************************************************************************/
-// SL_INIT
+// SLM_INIT
 // Data part
 typedef struct {
   // FB Interface - IN, OUT, IN_OUT variables
@@ -12,9 +12,27 @@ typedef struct {
 
   // FB private variables - TEMP, private and located variables
 
-} SL_INIT;
+} SLM_INIT;
 
-// SL_DISCRETE_OUT_8
+// SLM_THM_CONFIG
+// Data part
+typedef struct {
+  // FB Interface - IN, OUT, IN_OUT variables
+  __DECLARE_VAR(BOOL,EN)
+  __DECLARE_VAR(BOOL,ENO)
+  __DECLARE_VAR(SINT,SLOT)
+  __DECLARE_VAR(SINT,UNITS)
+  __DECLARE_VAR(SINT,CH1_RANGE)
+  __DECLARE_VAR(SINT,CH2_RANGE)
+  __DECLARE_VAR(SINT,CH3_RANGE)
+  __DECLARE_VAR(SINT,CH4_RANGE)
+  __DECLARE_VAR(BOOL,SUCCESS)
+
+  // FB private variables - TEMP, private and located variables
+
+} SLM_04THM_CONFIG;
+
+// SLM_DISCRETE_OUT_8
 // Data part
 typedef struct {
   // FB Interface - IN, OUT, IN_OUT variables
@@ -33,9 +51,9 @@ typedef struct {
   // FB private variables - TEMP, private and located variables
   __DECLARE_VAR(SINT,DUMMY)
 
-} SL_DISCRETE_OUT_8;
+} SLM_DISCRETE_OUT_8;
 
-// SL_DISCRETE_OUT_15
+// SLM_DISCRETE_OUT_15
 // Data part
 typedef struct {
   // FB Interface - IN, OUT, IN_OUT variables
@@ -61,9 +79,9 @@ typedef struct {
   // FB private variables - TEMP, private and located variables
   __DECLARE_VAR(SINT,DUMMY)
 
-} SL_DISCRETE_OUT_15;
+} SLM_DISCRETE_OUT_15;
 
-// SL_DISCRETE_OUT_16
+// SLM_DISCRETE_OUT_16
 // Data part
 typedef struct {
   // FB Interface - IN, OUT, IN_OUT variables
@@ -90,9 +108,9 @@ typedef struct {
   // FB private variables - TEMP, private and located variables
   __DECLARE_VAR(SINT,DUMMY)
 
-} SL_DISCRETE_OUT_16;
+} SLM_DISCRETE_OUT_16;
 
-// SL_DISCRETE_IN_8
+// SLM_DISCRETE_IN_8
 // Data part
 typedef struct {
   // FB Interface - IN, OUT, IN_OUT variables
@@ -110,9 +128,9 @@ typedef struct {
 
   // FB private variables - TEMP, private and located variables
 
-} SL_DISCRETE_IN_8;
+} SLM_DISCRETE_IN_8;
 
-// SL_DISCRETE_IN_16
+// SLM_DISCRETE_IN_16
 // Data part
 typedef struct {
   // FB Interface - IN, OUT, IN_OUT variables
@@ -138,9 +156,9 @@ typedef struct {
 
   // FB private variables - TEMP, private and located variables
 
-} SL_DISCRETE_IN_16;
+} SLM_DISCRETE_IN_16;
 
-// SL_ANALOG_IN_4
+// SLM_ANALOG_IN_4
 // Data part
 typedef struct {
   // FB Interface - IN, OUT, IN_OUT variables
@@ -153,10 +171,32 @@ typedef struct {
   __DECLARE_VAR(UINT,I4)
 
   // FB private variables - TEMP, private and located variables
+  __DECLARE_VAR(SINT,DUMMY)
 
-} SL_ANALOG_IN_4;
+} SLM_ANALOG_IN_4;
 
-// SL_ANALOG_OUT_4
+// SLM_ANALOG_IN_8
+// Data part
+typedef struct {
+  // FB Interface - IN, OUT, IN_OUT variables
+  __DECLARE_VAR(BOOL,EN)
+  __DECLARE_VAR(BOOL,ENO)
+  __DECLARE_VAR(SINT,SLOT)
+  __DECLARE_VAR(UINT,I1)
+  __DECLARE_VAR(UINT,I2)
+  __DECLARE_VAR(UINT,I3)
+  __DECLARE_VAR(UINT,I4)
+  __DECLARE_VAR(UINT,I5)
+  __DECLARE_VAR(UINT,I6)
+  __DECLARE_VAR(UINT,I7)
+  __DECLARE_VAR(UINT,I8)
+
+  // FB private variables - TEMP, private and located variables
+  __DECLARE_VAR(SINT,DUMMY)
+
+} SLM_ANALOG_IN_8;
+
+// SLM_ANALOG_OUT_4
 // Data part
 typedef struct {
   // FB Interface - IN, OUT, IN_OUT variables
@@ -169,25 +209,65 @@ typedef struct {
   __DECLARE_VAR(UINT,O4)
 
   // FB private variables - TEMP, private and located variables
+  __DECLARE_VAR(SINT,DUMMY)
 
-} SL_ANALOG_OUT_4;
+} SLM_ANALOG_OUT_4;
+
+// SLM_ANALOG_OUT_8
+// Data part
+typedef struct {
+  // FB Interface - IN, OUT, IN_OUT variables
+  __DECLARE_VAR(BOOL,EN)
+  __DECLARE_VAR(BOOL,ENO)
+  __DECLARE_VAR(SINT,SLOT)
+  __DECLARE_VAR(UINT,O1)
+  __DECLARE_VAR(UINT,O2)
+  __DECLARE_VAR(UINT,O3)
+  __DECLARE_VAR(UINT,O4)
+  __DECLARE_VAR(UINT,O5)
+  __DECLARE_VAR(UINT,O6)
+  __DECLARE_VAR(UINT,O7)
+  __DECLARE_VAR(UINT,O8)
+
+  // FB private variables - TEMP, private and located variables
+  __DECLARE_VAR(SINT,DUMMY)
+
+} SLM_ANALOG_OUT_8;
+
+// SLM_TEMPERATURE_4
+// Data part
+typedef struct {
+  // FB Interface - IN, OUT, IN_OUT variables
+  __DECLARE_VAR(BOOL,EN)
+  __DECLARE_VAR(BOOL,ENO)
+  __DECLARE_VAR(SINT,SLOT)
+  __DECLARE_VAR(REAL,I1)
+  __DECLARE_VAR(REAL,I2)
+  __DECLARE_VAR(REAL,I3)
+  __DECLARE_VAR(REAL,I4)
+
+  // FB private variables - TEMP, private and located variables
+  __DECLARE_VAR(SINT,DUMMY)
+
+} SLM_TEMPERATURE_4;
 /************************************************************************
- *                      END OF P1AM LIB BLOCKS                          *
+ *                      END OF Synergy LIB BLOCKS                       *
 ************************************************************************/
 
 /************************************************************************
  *                  DECLARATION LIBRARY FUNCTION CALLS                  *
 ************************************************************************/
-// uint8_t p1am_init();
-// void p1am_writeDiscrete(uint32_t data,uint8_t slot, uint8_t channel = 0);
-// uint32_t p1am_readDiscrete(uint8_t slot, uint8_t channel = 0);
-// int p1am_readAnalog(uint8_t slot, uint8_t channel)
-// void p1am_writeAnalog(uint32_t data,uint8_t slot, uint8_t channel);
+// uint8_t initHardware();
+// void writeDiscrete(uint32_t data,uint8_t slot, uint8_t channel = 0);
+// uint32_t readDiscrete(uint8_t slot, uint8_t channel = 0);
+// int readAnalog(uint8_t slot, uint8_t channel)
+// void writeAnalog(uint32_t data,uint8_t slot, uint8_t channel);
+// float readTemperature(uint8_t slot, uint8_t channel);
 
 /************************************************************************
- *                  DECLARATION OF P1AM LIB BLOCKS                      *
+ *                  DECLARATION OF Synergy LIB BLOCKS                   *
 ************************************************************************/
-static void SL_INIT_init__(SL_INIT *data__, BOOL retain) {
+static void SLM_INIT_init__(SLM_INIT *data__, BOOL retain) {
   __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->INIT,0,retain)
@@ -195,7 +275,7 @@ static void SL_INIT_init__(SL_INIT *data__, BOOL retain) {
 }
 
 // Code part
-static void SL_INIT_body__(SL_INIT *data__) {
+static void SLM_INIT_body__(SLM_INIT *data__) {
   static uint8_t init = 0;
   // Control execution
   if (!__GET_VAR(data__->EN)) {
@@ -205,23 +285,49 @@ static void SL_INIT_body__(SL_INIT *data__) {
   else {
     __SET_VAR(data__->,ENO,,__BOOL_LITERAL(TRUE));
   }
-  // if(init == 0) {
-  //   p1am_init();
-  //   init = 1;
-  // }
-  // __SET_VAR(data__->,SUCCESS,,p1am_init());
+
   __SET_VAR(data__->,SUCCESS,,__BOOL_LITERAL(TRUE));
 
   goto __end;
 
 __end:
   return;
-} // SL_INIT_body__()
+} // SLM_INIT_body__()
+
+static void SLM_04THM_CONFIG_init__(SLM_04THM_CONFIG *data__, BOOL retain) {
+  __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
+  __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
+  __INIT_VAR(data__->SLOT,0,retain)
+  __INIT_VAR(data__->UNITS,0,retain)
+  __INIT_VAR(data__->CH1_RANGE,0,retain)
+  __INIT_VAR(data__->CH2_RANGE,0,retain)
+  __INIT_VAR(data__->CH3_RANGE,0,retain)
+  __INIT_VAR(data__->CH4_RANGE,0,retain)
+  __INIT_VAR(data__->SUCCESS,0,retain)
+}
+
+// Code part
+static void SLM_04THM_CONFIG_body__(SLM_04THM_CONFIG *data__) {
+  // Control execution
+  if (!__GET_VAR(data__->EN)) {
+    __SET_VAR(data__->,ENO,,__BOOL_LITERAL(FALSE));
+    return;
+  }
+  else {
+    __SET_VAR(data__->,ENO,,__BOOL_LITERAL(TRUE));
+  }
+  char msg[100];
+
+  goto __end;
+
+__end:
+  return;
+} // SLM_CONFIG_TEMP_body__()
 
 /************************************************************************
  *                  DISCRETE LIB BLOCKS                                 *
 ************************************************************************/
-static void SL_DISCRETE_OUT_8_init__(SL_DISCRETE_OUT_8 *data__, BOOL retain) {
+static void SLM_DISCRETE_OUT_8_init__(SLM_DISCRETE_OUT_8 *data__, BOOL retain) {
   __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->SLOT,0,retain)
@@ -237,7 +343,7 @@ static void SL_DISCRETE_OUT_8_init__(SL_DISCRETE_OUT_8 *data__, BOOL retain) {
 }
 
 // Code part
-static void SL_DISCRETE_OUT_8_body__(SL_DISCRETE_OUT_8 *data__) {
+static void SLM_DISCRETE_OUT_8_body__(SLM_DISCRETE_OUT_8 *data__) {
   // Control execution
   if (!__GET_VAR(data__->EN)) {
     __SET_VAR(data__->,ENO,,__BOOL_LITERAL(FALSE));
@@ -254,15 +360,13 @@ static void SL_DISCRETE_OUT_8_body__(SL_DISCRETE_OUT_8 *data__) {
                         __GET_VAR(data__->O3) << 2 | 
                         __GET_VAR(data__->O2) << 1 | 
                         __GET_VAR(data__->O1);
-  // p1am_writeDiscrete(output_byte, __GET_VAR(data__->SLOT), 0);
-
   goto __end;
 
 __end:
   return;
-} // SL_DISCRETE_OUT_8_body__()
+} // SLM_DISCRETE_OUT_8_body__()
 
-static void SL_DISCRETE_OUT_15_init__(SL_DISCRETE_OUT_15 *data__, BOOL retain) {
+static void SLM_DISCRETE_OUT_15_init__(SLM_DISCRETE_OUT_15 *data__, BOOL retain) {
   __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->SLOT,0,retain)
@@ -285,7 +389,7 @@ static void SL_DISCRETE_OUT_15_init__(SL_DISCRETE_OUT_15 *data__, BOOL retain) {
 }
 
 // Code part
-static void SL_DISCRETE_OUT_15_body__(SL_DISCRETE_OUT_15 *data__) {
+static void SLM_DISCRETE_OUT_15_body__(SLM_DISCRETE_OUT_15 *data__) {
   // Control execution
   if (!__GET_VAR(data__->EN)) {
     __SET_VAR(data__->,ENO,,__BOOL_LITERAL(FALSE));
@@ -309,15 +413,13 @@ static void SL_DISCRETE_OUT_15_body__(SL_DISCRETE_OUT_15 *data__) {
                          __GET_VAR(data__->O3) << 2 | 
                          __GET_VAR(data__->O2) << 1 | 
                          __GET_VAR(data__->O1);
-  // p1am_writeDiscrete(output_byte, __GET_VAR(data__->SLOT), 0);
-
   goto __end;
 
 __end:
   return;
-} // SL_DISCRETE_OUT_15_body__()
+} // SLM_DISCRETE_OUT_15_body__()
 
-static void SL_DISCRETE_OUT_16_init__(SL_DISCRETE_OUT_16 *data__, BOOL retain) {
+static void SLM_DISCRETE_OUT_16_init__(SLM_DISCRETE_OUT_16 *data__, BOOL retain) {
   __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->SLOT,0,retain)
@@ -341,7 +443,7 @@ static void SL_DISCRETE_OUT_16_init__(SL_DISCRETE_OUT_16 *data__, BOOL retain) {
 }
 
 // Code part
-static void SL_DISCRETE_OUT_16_body__(SL_DISCRETE_OUT_16 *data__) {
+static void SLM_DISCRETE_OUT_16_body__(SLM_DISCRETE_OUT_16 *data__) {
   // Control execution
   if (!__GET_VAR(data__->EN)) {
     __SET_VAR(data__->,ENO,,__BOOL_LITERAL(FALSE));
@@ -366,15 +468,13 @@ static void SL_DISCRETE_OUT_16_body__(SL_DISCRETE_OUT_16 *data__) {
                          __GET_VAR(data__->O3) << 2 | 
                          __GET_VAR(data__->O2) << 1 | 
                          __GET_VAR(data__->O1);
-  // p1am_writeDiscrete(output_byte, __GET_VAR(data__->SLOT), 0);
-
   goto __end;
 
 __end:
   return;
-} // SL_DISCRETE_OUT_16_body__()
+} // SLM_DISCRETE_OUT_16_body__()
 
-static void SL_DISCRETE_IN_8_init__(SL_DISCRETE_IN_8 *data__, BOOL retain) {
+static void SLM_DISCRETE_IN_8_init__(SLM_DISCRETE_IN_8 *data__, BOOL retain) {
   __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->SLOT,0,retain)
@@ -389,7 +489,7 @@ static void SL_DISCRETE_IN_8_init__(SL_DISCRETE_IN_8 *data__, BOOL retain) {
 }
 
 // Code part
-static void SL_DISCRETE_IN_8_body__(SL_DISCRETE_IN_8 *data__) {
+static void SLM_DISCRETE_IN_8_body__(SLM_DISCRETE_IN_8 *data__) {
   // Control execution
   if (!__GET_VAR(data__->EN)) {
     __SET_VAR(data__->,ENO,,__BOOL_LITERAL(FALSE));
@@ -399,7 +499,6 @@ static void SL_DISCRETE_IN_8_body__(SL_DISCRETE_IN_8 *data__) {
     __SET_VAR(data__->,ENO,,__BOOL_LITERAL(TRUE));
   }
   #define bitRead(value, bit) (((value) >> (bit)) & 0x01)
-  // uint32_t input_byte = p1am_readDiscrete(__GET_VAR(data__->SLOT), 0);
   uint32_t input_byte;
   __SET_VAR(data__->,I1,,bitRead(input_byte, 0));
   __SET_VAR(data__->,I2,,bitRead(input_byte, 1));
@@ -414,9 +513,9 @@ static void SL_DISCRETE_IN_8_body__(SL_DISCRETE_IN_8 *data__) {
 
 __end:
   return;
-} // SL_DISCRETE_IN_8_body__()
+} // SLM_DISCRETE_IN_8_body__()
 
-static void SL_DISCRETE_IN_16_init__(SL_DISCRETE_IN_16 *data__, BOOL retain) {
+static void SLM_DISCRETE_IN_16_init__(SLM_DISCRETE_IN_16 *data__, BOOL retain) {
   __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->SLOT,0,retain)
@@ -439,7 +538,7 @@ static void SL_DISCRETE_IN_16_init__(SL_DISCRETE_IN_16 *data__, BOOL retain) {
 }
 
 // Code part
-static void SL_DISCRETE_IN_16_body__(SL_DISCRETE_IN_16 *data__) {
+static void SLM_DISCRETE_IN_16_body__(SLM_DISCRETE_IN_16 *data__) {
   // Control execution
   if (!__GET_VAR(data__->EN)) {
     __SET_VAR(data__->,ENO,,__BOOL_LITERAL(FALSE));
@@ -449,7 +548,6 @@ static void SL_DISCRETE_IN_16_body__(SL_DISCRETE_IN_16 *data__) {
     __SET_VAR(data__->,ENO,,__BOOL_LITERAL(TRUE));
   }
   #define bitRead(value, bit) (((value) >> (bit)) & 0x01)
-  // uint32_t input_byte = p1am_readDiscrete(__GET_VAR(data__->SLOT), 0);
   uint32_t input_byte;
   __SET_VAR(data__->,I1,,bitRead(input_byte, 0));
   __SET_VAR(data__->,I2,,bitRead(input_byte, 1));
@@ -467,21 +565,21 @@ static void SL_DISCRETE_IN_16_body__(SL_DISCRETE_IN_16 *data__) {
   __SET_VAR(data__->,I14,,bitRead(input_byte, 13));
   __SET_VAR(data__->,I15,,bitRead(input_byte, 14));
   __SET_VAR(data__->,I16,,bitRead(input_byte, 15));
-
   goto __end;
 
 __end:
   return;
-} // SL_DISCRETE_IN_16_body__()
+} // SLM_DISCRETE_IN_16_body__()
 
 /************************************************************************
  *                  ANALOG LIB BLOCKS                                   *
 ************************************************************************/
 
-static void SL_ANALOG_IN_4_init__(SL_ANALOG_IN_4 *data__, BOOL retain) {
+static void SLM_ANALOG_IN_4_init__(SLM_ANALOG_IN_4 *data__, BOOL retain) {
   __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->SLOT,0,retain)
+  __INIT_VAR(data__->DUMMY,0,retain)
   __INIT_VAR(data__->I1,0,retain)
   __INIT_VAR(data__->I2,0,retain)
   __INIT_VAR(data__->I3,0,retain)
@@ -489,7 +587,7 @@ static void SL_ANALOG_IN_4_init__(SL_ANALOG_IN_4 *data__, BOOL retain) {
 }
 
 // Code part
-static void SL_ANALOG_IN_4_body__(SL_ANALOG_IN_4 *data__) {
+static void SLM_ANALOG_IN_4_body__(SLM_ANALOG_IN_4 *data__) {
   // Control execution
   if (!__GET_VAR(data__->EN)) {
     __SET_VAR(data__->,ENO,,__BOOL_LITERAL(FALSE));
@@ -499,25 +597,75 @@ static void SL_ANALOG_IN_4_body__(SL_ANALOG_IN_4 *data__) {
     __SET_VAR(data__->,ENO,,__BOOL_LITERAL(TRUE));
   }
   char msg[100];
-  // uint16_t input_byte = p1am_readAnalog(__GET_VAR(data__->SLOT), 1);
+  // uint16_t input_byte = readAnalog(__GET_VAR(data__->SLOT), 1);
   // __SET_VAR(data__->,I1,,input_byte);
-  // input_byte = p1am_readAnalog(__GET_VAR(data__->SLOT), 2);
+  // input_byte = readAnalog(__GET_VAR(data__->SLOT), 2);
   // __SET_VAR(data__->,I2,,input_byte);
-  // input_byte = p1am_readAnalog(__GET_VAR(data__->SLOT), 3);
+  // input_byte = readAnalog(__GET_VAR(data__->SLOT), 3);
   // __SET_VAR(data__->,I3,,input_byte);
-  // input_byte = p1am_readAnalog(__GET_VAR(data__->SLOT), 4);
+  // input_byte = readAnalog(__GET_VAR(data__->SLOT), 4);
   // __SET_VAR(data__->,I4,,input_byte);
 
   goto __end;
 
 __end:
   return;
-} // SL_ANALOG_IN_4_body__()
+} // SLM_ANALOG_IN_4_body__()
 
-static void SL_ANALOG_OUT_4_init__(SL_ANALOG_OUT_4 *data__, BOOL retain) {
+static void SLM_ANALOG_IN_8_init__(SLM_ANALOG_IN_8 *data__, BOOL retain) {
   __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
   __INIT_VAR(data__->SLOT,0,retain)
+  __INIT_VAR(data__->DUMMY,0,retain)
+  __INIT_VAR(data__->I1,0,retain)
+  __INIT_VAR(data__->I2,0,retain)
+  __INIT_VAR(data__->I3,0,retain)
+  __INIT_VAR(data__->I4,0,retain)
+  __INIT_VAR(data__->I5,0,retain)
+  __INIT_VAR(data__->I6,0,retain)
+  __INIT_VAR(data__->I7,0,retain)
+  __INIT_VAR(data__->I8,0,retain)
+}
+
+// Code part
+static void SLM_ANALOG_IN_8_body__(SLM_ANALOG_IN_8 *data__) {
+  // Control execution
+  if (!__GET_VAR(data__->EN)) {
+    __SET_VAR(data__->,ENO,,__BOOL_LITERAL(FALSE));
+    return;
+  }
+  else {
+    __SET_VAR(data__->,ENO,,__BOOL_LITERAL(TRUE));
+  }
+  char msg[100];
+  // uint16_t input_byte = _readAnalog(__GET_VAR(data__->SLOT), 1);
+  // __SET_VAR(data__->,I1,,input_byte);
+  // input_byte = readAnalog(__GET_VAR(data__->SLOT), 2);
+  // __SET_VAR(data__->,I2,,input_byte);
+  // input_byte = readAnalog(__GET_VAR(data__->SLOT), 3);
+  // __SET_VAR(data__->,I3,,input_byte);
+  // input_byte = readAnalog(__GET_VAR(data__->SLOT), 4);
+  // __SET_VAR(data__->,I4,,input_byte);
+  // input_byte = readAnalog(__GET_VAR(data__->SLOT), 5);
+  // __SET_VAR(data__->,I5,,input_byte);
+  // input_byte = readAnalog(__GET_VAR(data__->SLOT), 6);
+  // __SET_VAR(data__->,I6,,input_byte);
+  // input_byte = readAnalog(__GET_VAR(data__->SLOT), 7);
+  // __SET_VAR(data__->,I7,,input_byte);
+  // input_byte = readAnalog(__GET_VAR(data__->SLOT), 8);
+  // __SET_VAR(data__->,I8,,input_byte);
+
+  goto __end;
+
+__end:
+  return;
+} // SLM_ANALOG_IN_8_body__()
+
+static void SLM_ANALOG_OUT_4_init__(SLM_ANALOG_OUT_4 *data__, BOOL retain) {
+  __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
+  __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
+  __INIT_VAR(data__->SLOT,0,retain)
+  __INIT_VAR(data__->DUMMY,0,retain)
   __INIT_VAR(data__->O1,0,retain)
   __INIT_VAR(data__->O2,0,retain)
   __INIT_VAR(data__->O3,0,retain)
@@ -525,7 +673,7 @@ static void SL_ANALOG_OUT_4_init__(SL_ANALOG_OUT_4 *data__, BOOL retain) {
 }
 
 // Code part
-static void SL_ANALOG_OUT_4_body__(SL_ANALOG_OUT_4 *data__) {
+static void SLM_ANALOG_OUT_4_body__(SLM_ANALOG_OUT_4 *data__) {
   // Control execution
   if (!__GET_VAR(data__->EN)) {
     __SET_VAR(data__->,ENO,,__BOOL_LITERAL(FALSE));
@@ -536,19 +684,105 @@ static void SL_ANALOG_OUT_4_body__(SL_ANALOG_OUT_4 *data__) {
   }
   char msg[100];
   // uint32_t data = __GET_VAR(data__->O1);
-  // p1am_writeAnalog(data, __GET_VAR(data__->SLOT), 1);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 1);
   // data = __GET_VAR(data__->O2);
-  // p1am_writeAnalog(data, __GET_VAR(data__->SLOT), 2);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 2);
   // data = __GET_VAR(data__->O3);
-  // p1am_writeAnalog(data, __GET_VAR(data__->SLOT), 3);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 3);
   // data = __GET_VAR(data__->O4);
-  // p1am_writeAnalog(data, __GET_VAR(data__->SLOT), 4);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 4);
 
   goto __end;
 
 __end:
   return;
-} // SL_ANALOG_OUT_4_body__()
+} // SLM_ANALOG_OUT_4_body__()
+
+static void SLM_ANALOG_OUT_8_init__(SLM_ANALOG_OUT_8 *data__, BOOL retain) {
+  __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
+  __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
+  __INIT_VAR(data__->SLOT,0,retain)
+  __INIT_VAR(data__->DUMMY,0,retain)
+  __INIT_VAR(data__->O1,0,retain)
+  __INIT_VAR(data__->O2,0,retain)
+  __INIT_VAR(data__->O3,0,retain)
+  __INIT_VAR(data__->O4,0,retain)
+  __INIT_VAR(data__->O5,0,retain)
+  __INIT_VAR(data__->O6,0,retain)
+  __INIT_VAR(data__->O7,0,retain)
+  __INIT_VAR(data__->O8,0,retain)
+}
+
+// Code part
+static void SLM_ANALOG_OUT_8_body__(SLM_ANALOG_OUT_8 *data__) {
+  // Control execution
+  if (!__GET_VAR(data__->EN)) {
+    __SET_VAR(data__->,ENO,,__BOOL_LITERAL(FALSE));
+    return;
+  }
+  else {
+    __SET_VAR(data__->,ENO,,__BOOL_LITERAL(TRUE));
+  }
+  char msg[100];
+  // uint32_t data = __GET_VAR(data__->O1);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 1);
+  // data = __GET_VAR(data__->O2);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 2);
+  // data = __GET_VAR(data__->O3);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 3);
+  // data = __GET_VAR(data__->O4);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 4);
+  // data = __GET_VAR(data__->O5);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 5);
+  // data = __GET_VAR(data__->O6);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 6);
+  // data = __GET_VAR(data__->O7);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 7);
+  // data = __GET_VAR(data__->O8);
+  // writeAnalog(data, __GET_VAR(data__->SLOT), 8);
+
+  goto __end;
+
+__end:
+  return;
+} // SLM_ANALOG_OUT_8_body__()
+
+static void SLM_TEMPERATURE_4_init__(SLM_TEMPERATURE_4 *data__, BOOL retain) {
+  __INIT_VAR(data__->EN,__BOOL_LITERAL(TRUE),retain)
+  __INIT_VAR(data__->ENO,__BOOL_LITERAL(TRUE),retain)
+  __INIT_VAR(data__->SLOT,0,retain)
+  __INIT_VAR(data__->DUMMY,0,retain)
+  __INIT_VAR(data__->I1,0,retain)
+  __INIT_VAR(data__->I2,0,retain)
+  __INIT_VAR(data__->I3,0,retain)
+  __INIT_VAR(data__->I4,0,retain)
+}
+
+// Code part
+static void SLM_TEMPERATURE_4_body__(SLM_TEMPERATURE_4 *data__) {
+  // Control execution
+  if (!__GET_VAR(data__->EN)) {
+    __SET_VAR(data__->,ENO,,__BOOL_LITERAL(FALSE));
+    return;
+  }
+  else {
+    __SET_VAR(data__->,ENO,,__BOOL_LITERAL(TRUE));
+  }
+  char msg[100];
+  // uint16_t input_byte = readTemperature(__GET_VAR(data__->SLOT), 1);
+  // __SET_VAR(data__->,I1,,input_byte);
+  // input_byte = readTemperature(__GET_VAR(data__->SLOT), 2);
+  // __SET_VAR(data__->,I2,,input_byte);
+  // input_byte = readTemperature(__GET_VAR(data__->SLOT), 3);
+  // __SET_VAR(data__->,I3,,input_byte);
+  // input_byte = readTemperature(__GET_VAR(data__->SLOT), 4);
+  // __SET_VAR(data__->,I4,,input_byte);
+
+  goto __end;
+
+__end:
+  return;
+} // SLM_TEMPERATURE_4_body__()
 /************************************************************************
- *                      END OF P1AM LIB BLOCKS                          *
+ *                      END OF Synergy LIB BLOCKS                       *
 ************************************************************************/
